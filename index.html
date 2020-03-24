@@ -12,16 +12,22 @@
 
 <script>
 	//$(document).ready(function () {
-		//alert("jQuery is working");
+	//alert("jQuery is working");
 	//});
 
 	$(function () {
-		$('section > h2').css({"border":"black 1px solid","color":" #CC1C0D", "padding":"3px 0 3px 20px","border-radius":"0 5px 0 5px","background-color":"#DFE3E6"});
-		$('aside > h2').css({"border":"black 1px solid","color":" #CC1C0D", "padding":"3px 0 3px 20px","border-radius":"0 5px 0 5px","background-color":"#DFE3E6"});
-		//Step 8
+		$('section > h2').css({ "border": "black 1px solid", "color": " #CC1C0D", "padding": "3px 0 3px 20px", "border-radius": "0 5px 0 5px", "background-color": "#DFE3E6" });
+		$('aside > h2').css({ "border": "black 1px solid", "color": " #CC1C0D", "padding": "3px 0 3px 20px", "border-radius": "0 5px 0 5px", "background-color": "#DFE3E6" });
+
 		$('ul > li').addClass('navigation');
-		//Step 9
-		$('.navigation').css({'border':'1px solid #929CA4', 'color':'#CC1C0D',"padding":"3px 0 3px 20px","background-color":"#DFE3E6"})
+
+		$('.navigation').css({ 'border': '1px solid #929CA4', 'color': '#CC1C0D', "padding": "3px 0 3px 20px", "background-color": "#DFE3E6" })
+
+		$('p').removeClass('vprospect').removeClass('vconvert').removeClass('vretain')
+
+		//$('aside > p:nth(1)').append('<span id="add_here"> <br> Chevy Dealers Association</span>');
+		$('aside > p:nth(1)').append('<br> Chevy Dealers Association');
+		$('aside > p:nth(0)').wrapAll('<q></q>')
 
 
 

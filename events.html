@@ -29,7 +29,7 @@
             //     window.alert("The mouse left the grey div");
             // }).on('click', function (event) {
             //   window.alert("You clicked on the grey box")
-            
+
             $("#step20").css({ "height": "400px", "width": "400px" });
 
             $('#step20').on({
@@ -49,13 +49,22 @@
 
             });
 
+
+            $('.visitedLinks').click(function (event) {
+                event.preventDefault();
+                $('.visitedLinks').css("color", "red");
+                window.alert(event.target.nodeName + " triggered the event!");
+            });
         });
-
-
     </script>
 </head>
 
 <body>
+
+    <div id="step22">
+        <a class="visitedLinks" href="http://modulemedia.com">Module Media</a>
+
+    </div>
     <div style="margin: 20px 20px">
 
         <button class="btn" id="btn1">Button #1</button>

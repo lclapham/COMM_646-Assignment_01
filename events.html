@@ -9,23 +9,54 @@
 
     <script>
         $(function () {
-        $("#btn1").click(function (event) {window.alert("You clicked button #1"); });
+            $("#btn1").click(function (event) { window.alert("You clicked button #1"); });
 
-        $("#btn2").bind('click', function(event) {
-            window.alert("You clicked button #2")
+            $("#btn2").bind('click', function (event) {
+                window.alert("You clicked button #2")
+            });
+
+            $("#btn3").on('click', function (event) {
+                window.alert("You clicked button #3")
+            });
+
+            $(".lowerBtn").on('click', function (event) {
+                window.alert("You clicked one of the lower buttons")
+            });
+
+            $("#step20").css({"height":"400px", "width":"400px"}).on("mouseenter", function() {
+                window.alert("The mouse is on the grey div");
+            }).on("mouseleave", function() {
+                window.alert("The mouse left the grey div");
+            }).on('click', function (event) {
+                window.alert("You clicked on the grey box")
+            });
+
+
+            
+
+
         });
-
-
-    });
 
     </script>
 </head>
 
 <body>
+    <div style="margin: 20px 20px">
 
-    <button class="btn" id="btn1">Button #1</button>
-    <button class="btn" id="btn2">Button #2</button>
-    <button class="btn" id="btn3">Button #3</button>
+        <button class="btn" id="btn1">Button #1</button>
+        <button class="btn" id="btn2">Button #2</button>
+        <button class="btn" id="btn3">Button #3</button>
+
+    </div>
+
+    <div style="margin: 20px 20px">
+        <button class="lowerBtn">Button #4</button>
+        <button class="lowerBtn">Button #5</button>
+    </div>
+
+    <div class="container" id="step20" style="background-color: darkgray; margin:auto">
+
+    </div>
 </body>
 
 </html>

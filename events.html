@@ -56,10 +56,18 @@
                 window.alert(event.target.nodeName + " triggered the event!");
             });
 
-            $(window).resize(function() {
-                $('#windowWidth').text("The width: " +$(window).width()+ "px");
-                $('#windowHeight').text("The height: " +$(window).height()+ "px");
+            $(window).resize(function () {
+                $('#windowWidth').text("The width: " + $(window).width() + "px");
+                $('#windowHeight').text("The height: " + $(window).height() + "px");
             });
+
+            $("#step24").focus(function () {
+                $(this).css("background-color", "#cccccc");
+            });
+            $("#step24").focusout(function () {
+                $(this).css("background-color", "#ffffff");
+            });
+
         });
     </script>
 </head>
@@ -92,6 +100,10 @@
     <div>
         <p id="windowHeight"></p>
         <p id="windowWidth"></p>
+    </div>
+
+    <div>
+        <input type="text" name="Hello World" id="step24">
     </div>
 </body>
 

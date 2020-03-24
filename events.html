@@ -23,19 +23,34 @@
                 window.alert("You clicked one of the lower buttons")
             });
 
-            $("#step20").css({"height":"400px", "width":"400px"}).on("mouseenter", function() {
-                window.alert("The mouse is on the grey div");
-            }).on("mouseleave", function() {
-                window.alert("The mouse left the grey div");
-            }).on('click', function (event) {
-                window.alert("You clicked on the grey box")
+            // $("#step20").css({"height":"400px", "width":"400px"}).on("mouseenter", function() {
+            //   window.alert("The mouse is on the grey div");
+            // }).on("mouseleave", function() {
+            //     window.alert("The mouse left the grey div");
+            // }).on('click', function (event) {
+            //   window.alert("You clicked on the grey box")
+            
+            $("#step20").css({ "height": "400px", "width": "400px" });
+
+            $('#step20').on({
+                mouseenter: function () {
+                    $('#sp1').replaceWith('The mouse entered the div <br>');
+                },
+
+                mouseleave: function () {
+                    $('#sp2').replaceWith('The mouse left the div <br>');
+
+                },
+
+                click: function () {
+                    $('#sp3').replaceWith('The div was clicked <br>');
+
+                }
+
             });
 
-
-            
-
-
         });
+
 
     </script>
 </head>
@@ -55,6 +70,9 @@
     </div>
 
     <div class="container" id="step20" style="background-color: darkgray; margin:auto">
+        <span id="sp1"></span>
+        <span id="sp2"></span>
+        <span id="sp3"></span>
 
     </div>
 </body>

@@ -69,24 +69,29 @@
                 $(this).css("background-color", "#ffffff");
             });
 
-            $('#myform').validate({ // initialize the plugin
+            $('#myForm').validate({ // initialize the plugin
                 rules: {
-                    
-                    uname: 'required',
-                    uemail: {
+
+                    userEmail: {
                         required: true,
                         email: true
-                       
+
                     },
-                    uname: {
+                    userName: {
                         required: true,
                         minlength: 5
                     }
                 },
                 messages: {
-                    uemail: "This is required",
-                    uname: "This is required"
-                }
+                    userName: {
+                        required: "Input required",
+
+
+                    },
+                    userEmail: {
+                        email: "Must be a valid email"
+                    }
+                },
             });
 
         });
@@ -126,15 +131,21 @@
     <div>
         <input type="text" name="Hello World" id="step24">
     </div>
-<fieldset style="margin-top: 20px;">
-    <form action="/helloWorld.com">
-        <label for="unmae">Enter Name</label>
-        <input type="text" name="userName" id="uname" required>
-        <label for="uemail">Enter Email Address</label>
-        <input type="email" name="userEmail" id="uemail">
-        <button type="submit">Submit</button>
-    </form>
-</fieldset>
+    <fieldset style="margin-top: 20px;">
+        <form id="myForm" action="/helloWorld.com">
+            <div style="margin-top:20px">
+                <label for="unmae">Enter Name</label>
+                <input type="text" name="userName" id="uname">
+
+            </div>
+            <div style="margin-top:20px">
+                <label for="uemail">Enter Email Address</label>
+                <input type="email" name="userEmail" id="uemail">
+            </div>
+
+            <button style="margin-top:20px" id="submit-button" type="submit">Submit</button>
+        </form>
+    </fieldset>
 </body>
 
 
